@@ -9,4 +9,9 @@ const app = express();
 
 mongoose.connect('mongodb://localhost:27017/bitfilmsdb');
 
+app.use(require('./middlewares/auth'));
+
+app.use('/users', require('./routes/user'));
+app.use('/movies', require('./routes/movie'));
+
 app.listen(NODE_ENV === 'production' ? PORT : config.PORT);
