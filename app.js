@@ -11,11 +11,11 @@ const { signInRules, signUpRules } = require('./validationRules/auth');
 const limiter = require('./middlewares/limiter');
 const NotFoundError = require('./errors/NotFoundError');
 
-const { NODE_ENV, PORT } = process.env;
+const { NODE_ENV, PORT, DB_CONNECT } = process.env;
 
 const app = express();
 
-mongoose.connect(config.DB_CONNECT);
+mongoose.connect(NODE_ENV === 'production' ? DB_CONNECT : config.DB_CONNECT);
 
 app.use(helmet());
 app.use(express.json());
