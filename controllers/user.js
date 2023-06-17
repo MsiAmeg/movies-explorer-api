@@ -85,7 +85,7 @@ const signout = (req, res, next) => {
   try {
     if (NODE_ENV === 'production') {
       return res.status(200).clearCookie('jwt', {
-        domain: '..rekunir.diplom.nomoredomains.rocks',
+        domain: '.rekunir.diplom.nomoredomains.rocks',
         path: '/',
       }).send({ message: 'cookie cleared successful' });
     }
