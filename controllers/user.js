@@ -83,6 +83,12 @@ const login = (req, res, next) => {
 
 const signout = (req, res, next) => {
   try {
+    if (NODE_ENV === 'production') {
+      return res.status(200).clearCookie('jwt', {
+        domain: '..rekunir.diplom.nomoredomains.rocks',
+        path: '/',
+      }).send({ message: 'cookie cleared successful' });
+    }
     return res.status(200).clearCookie('jwt').send({ message: 'cookie cleared successful' });
   } catch (err) {
     return next(err);
