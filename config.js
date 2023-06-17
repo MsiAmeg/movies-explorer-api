@@ -10,8 +10,12 @@ const config = {
     'http://localhost:3000',
   ],
   CORS_OPTIONS: {
-    origin: this.ALLOWED_CORS,
-    methods: this.DEFAULT_ALLOWED_METHODS.split(','),
+    origin: [
+      'https://api.rekunir.diplom.nomoredomains.rocks',
+      'https://rekunir.diplom.nomoredomains.rocks',
+      'http://localhost:3000',
+    ],
+    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
     credentials: true,
     optionsSuccessStatus: 204,
   },
