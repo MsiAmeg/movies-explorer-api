@@ -1,6 +1,6 @@
 const config = {
   DB_CONNECT: 'mongodb://localhost:27017/bitfilmsdb',
-  PORT: 3000,
+  PORT: 3001,
   URL_PATTERN: "^https?:\\/\\/(www.)?[\\da-zA-Z\\-\\.\\_\\~\\:\\/\\?\\#\\[\\]@\\!\\$\\&\\'\\(\\)\\*\\,\\;\\=]{2,}#?$",
   SECRET_KEY: '8924c2c6c6792d5e3355ee3f6a6b5a817b9d00b8',
   DEFAULT_ALLOWED_METHODS: 'GET,HEAD,PUT,PATCH,POST,DELETE',
