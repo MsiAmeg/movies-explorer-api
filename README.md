@@ -14,6 +14,8 @@
 ![Cors](https://img.shields.io/badge/CORS-black?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/Eslint-black?style=for-the-badge&logo=eslint)
 
+## Статус: Завершен
+
 ## Запуск проекта:
 1. Клонировать репозиторий.
 2. Установить зависимости.
